@@ -1,4 +1,4 @@
-# Demo Game Básico
+# Juego Laberinto
 
 ### Conceptos
 - Utilizar el objecto game y crear el tablero.
