@@ -60,14 +60,29 @@ object nivel1 {
 		var enemigos = [new Position(x=4, y=2),new Position(x=2, y=5),new Position(x=3, y=7)]
 			.map{ p => self.crear(new Enemigo(position = p)) }
 	
-//Colisiones	
-	     game.whenCollideDo(player, { elemento => elemento.tomarArma()
-	     player.estaArmado(true)
-	     })  
-	}
+//Colisiones
+
+		//colisiones 2	
+		game.whenCollideDo(player, {elemento => elemento.colisionadoPor(player) 
+			if(!player.estaArmado()) {player.chocarCon(enemigos)} else {}
+			
+		})
+		
+
+         /*game.whenCollideDo(player, { armas => player.chocarConObjeto(armas)
+         	player.estaArmado(true)
+         })
+         
+	     game.whenCollideDo(player, { elemento => elemento.producirAccion()})  
+	     
+	     game.whenCollideDo(player, { enemigos => player.chocarCon(enemigos)})
+		*/
+	
+}
 	
 	method crear(dibujo) {
 		game.addVisual(dibujo)
 		return dibujo
 	}
+	
 }

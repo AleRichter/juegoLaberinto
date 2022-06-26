@@ -9,8 +9,15 @@ class Arma {
 	
 	method tePuedePisar(unObjeto) = true
 	
-	method tomarArma(){
+	method colisionadoPor(objeto) {
+		game.removeVisual(self)
+		objeto.agarroArma()
+		armaTomada= true
+	}
+	
+	/*method producirAccion(){
 		game.removeVisual(self)
 		armaTomada = true
 	}
+	*/
 }

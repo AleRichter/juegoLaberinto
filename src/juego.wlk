@@ -1,11 +1,12 @@
 import wollok.game.*
 import direcciones.*
+import arma.*
 
 object player {
 	
 	var property position = game.at(4, 0)
-	var property direccion = arriba
-	var property estaArmado = false
+	var property direccion = arriba 
+	var  estaArmado = false
 
 	var vidas = 3
 	
@@ -16,10 +17,17 @@ object player {
 		  return "guerreroSinArma.png"
 	   }
 	}
-	
 	method mensaje() = "Necesito poder defenderme"
 	
 //Intento de collide----------------------------------
+
+method estaArmado() = estaArmado
+
+method agarroArma() {estaArmado= true}
+
+
+
+//------------------------------------------------------
     
     method juegoTerminado() = vidas == 0
 	
@@ -27,10 +35,12 @@ object player {
 		position = game.at(4, 0)
 	}
 	
+	//method chocarConObjeto(objeto) {estaArmado = objeto.image() == "arma2.png"}
+	
 	method chocarCon(rival) {
-		vidas = vidas - 1
+		vidas -= 1
 		self.resetPosition()
-		rival.resetPosition()
+//		rival.resetPosition()
 		if (self.juegoTerminado()) {
 			game.stop()
 		}
@@ -80,4 +90,17 @@ object player {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
