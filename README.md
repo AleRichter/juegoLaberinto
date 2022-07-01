@@ -7,4 +7,4 @@
 # Instrucciones / Modo de Juego :
 
 ## Valeria Guil 
-![MenuJuegoLaberinto](https://github.com/AleRichter/juegoLaberinto)
+![MenuJuegoLaberinto](https://github.com/AleRichter/juegoLaberinto/blob/main/MenuJuegoLaberinto.jpeg)
