@@ -8,7 +8,7 @@
 
 ## Instrucciones / Modo de Juego
 
-Con Las Flechitas moves al guerrero
+### Con las flechitas moves al guerrero 
 ![MoverAGuerrero](https://github.com/AleRichter/juegoLaberinto/blob/main/MoverAGuerrero.png) 
 
 ### Encuentra el arma para el guerrero 
